@@ -1,0 +1,36 @@
+.main_div{
+    padding-top: 50px;
+    width: 40%;
+    margin: auto;
+
+    font-weight: bold;
+    font-size: 20px;
+    
+
+}
+
+.bt{
+    margin: auto;
+    width: 150px;
+    padding-top: 20px;
+}
+.h3_div{
+    padding-left: 10px;
+    width: 150px;
+    margin: auto;
+}
+h3{
+    font-family: 'Akronim', cursive;
+    font-weight: bold;
+    font-size: 100px;
+}
+.warning{
+    margin:auto;
+    padding-top:10px;
+
+
+}
+p{
+    margin:auto;
+    color:#FF0000;
+}

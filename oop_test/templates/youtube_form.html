@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube_form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/twitter_style.css">
+</head>
+
+<body>
+    <div class="newsletter-subscribe">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Analyse your YouTube comments sentiments</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            </div>
+            <form class="form-inline" method="post">
+                <div class="form-group"><input class="form-control" type="text" name="text" placeholder="Your video id"></div>
+                <div class="form-group"><button class="btn btn-primary" type="submit">Submit </button></div>
+            </form>
+        </div>
+    </div>
+        <div class="table_content">
+        {% if data['negative'] !=0 or data['positive'] !=0 or  data['neutral'] !=0 %}
+            <table class="table table-striped">
+              <thead>
+                <tr>
+
+                  <th scope="col">Positive</th>
+                  <th scope="col">Negative</th>
+                  <th scope="col">Neutral</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+
+                  <td>{{data['positive']}}</td>
+                  <td>{{data['negative']}}</td>
+                  <td>{{data['neutral']}}</td>
+                </tr>
+
+                <tr>
+
+                  <td><a href="{{url_for('positive')}}"><button type="button" class="btn btn-outline-success">Positive</button></a></td>
+                  <td><a href="{{url_for('negative')}}"><button type="button" class="btn btn-outline-danger">Negative</button></a></td>
+                  <td><a href="{{url_for('neutral')}}"><button type="button" class="btn btn-outline-primary">Neutral</button></a></td>
+                </tr>
+
+              </tbody>
+            </table>
+        {% endif%}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
